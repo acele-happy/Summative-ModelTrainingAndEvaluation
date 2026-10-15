@@ -1,0 +1,7 @@
+# raw data must NOT be committed (it lives in the Google Drive folder)
+diabetic_data.csv
+IDs_mapping.csv
+*.zip
+artifacts/
+.ipynb_checkpoints/
+__pycache__/
