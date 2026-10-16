@@ -5,3 +5,4 @@ IDs_mapping.csv
 artifacts/
 .ipynb_checkpoints/
 __pycache__/
+.venv/
