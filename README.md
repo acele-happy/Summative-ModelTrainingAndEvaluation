@@ -29,7 +29,16 @@ Machine Learning module project: traditional ML (scikit-learn) vs deep learning 
 - Evaluation: ROC-AUC, PR-AUC, precision/recall, F2 threshold tuning, learning curves, confusion matrices, error analysis.
 
 ## Results
-<paste your final results table here>
+Held-out test set (13,998 encounters; positive rate 9.0%). Thresholds maximise F2 and were chosen without using the test labels.
+
+| Model | ROC-AUC | PR-AUC | Precision | Recall | F2 |
+|---|---:|---:|---:|---:|---:|
+| Random forest (tuned) | 0.656 | 0.179 | 0.124 | 0.679 | 0.358 |
+| Residual MLP (best DL) | 0.652 | 0.165 | 0.108 | 0.831 | 0.356 |
+| Histogram gradient boosting (tuned) | 0.650 | 0.183 | 0.117 | 0.700 | 0.350 |
+| Logistic regression (tuned) | 0.649 | 0.169 | 0.114 | 0.762 | 0.357 |
+
+The random-forest 95% bootstrap interval for ROC-AUC is 0.640–0.673. The neural-network interval is 0.636–0.670. They overlap. Feature engineering changed cross-validated ROC-AUC by only +0.002 to +0.006. Figures from the executed notebook are in `figures/`. The written report is `Predicting 30-Day Hospital Readmission in Diabetic Patients - Report.docx`.
 
 ## Note
 The raw dataset is intentionally not committed to this repository.
